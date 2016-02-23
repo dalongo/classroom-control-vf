@@ -43,4 +43,5 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "I learned a lot of stuff but I can't get git to work right": }
+  notify { "Kilroy was here": }
 }
