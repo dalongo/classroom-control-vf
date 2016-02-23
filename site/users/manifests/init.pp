@@ -1,5 +1,5 @@
-user { 'fundamentals':
+class ssh {
   user { 'fundamentals':
-  ensure => present,
+    ensure => present,
   }
 }
