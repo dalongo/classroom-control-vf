@@ -42,6 +42,8 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  
+  include users
   notify { "I learned a lot of stuff but I can't get git to work right": }
   notify { "Kilroy was here": }
 }
