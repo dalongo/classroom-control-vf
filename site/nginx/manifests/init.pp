@@ -1,6 +1,7 @@
 class nginx {
 
-  $nginx_dir = 'puppet:///modules/nginx'
+#  $nginx_dir = 'puppet:///modules/nginx'
+   $nginx_dir = '/modules/nginx'
   
   File {
     owner => 'root',
