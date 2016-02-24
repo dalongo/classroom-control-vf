@@ -31,6 +31,6 @@ class nginx {
   
   service{'nginx':
     ensure  => running,
-    require  => File['docrot']
-    subscribe => [File['config'],File['block']]
+    require  => File['docroot']
+    subscribe => [File['config'],File['block']],
   ]
