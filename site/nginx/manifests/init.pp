@@ -27,10 +27,11 @@ class nginx {
    source  => 'puppet:///modules/nginx/default.conf',
    require => Package['nginx'],
    notify  => Service['nginx'],
-  ]
+  }
   
   service{'nginx':
     ensure  => running,
     require  => File['docroot']
     subscribe => [File['config'],File['block']],
-  ]
+  }
+}
