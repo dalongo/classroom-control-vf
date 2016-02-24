@@ -26,13 +26,13 @@ class nginx {
   file{'config':
     ensure  => file,
     path    => "/etc/nginx/nginx.conf",
-    source  => "($nginx_dir")default.conf",
+    source  => "$(nginx_dir")default.conf",
   }
  
  file{'block':
    ensure  => file,
    path    => "/etc/nginx/conf.d/default.conf',",
-   source  => "($nginx_dir")/default.conf',
+   source  => "$(nginx_dir")/default.conf',
    require => Package['nginx'],
    notify  => Service['nginx'],
   }
