@@ -8,7 +8,7 @@ define users::managed_user (
     mode => '0640'
   }
   group { $group:
-    ensure => present.
+    ensure => present,
   }
   
   user { $title:
