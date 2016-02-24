@@ -32,7 +32,7 @@ class nginx {
  file{'block':
    ensure  => file,
    path    => "/etc/nginx/conf.d/default.conf',",
-   source  => "$(nginx_dir")/default.conf',
+   source  => "$(nginx_dir)/default.conf',
    require => Package['nginx'],
    notify  => Service['nginx'],
   }
