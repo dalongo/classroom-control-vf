@@ -1,4 +1,4 @@
-class ngonx {
+class nginx {
 
   package{'nginx':
     ensure=>present,
