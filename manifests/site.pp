@@ -47,7 +47,7 @@ node default {
   
   unless $::is_virtual == 'physical'{
     $hypervisor = capitalize($::virtual)
-    notify {"My hypervisor is ${hypervisor}\n
+    notify {"My hypervisor is ${hypervisor}\n"
   }
   notify { "I learned a lot of stuff but I can't get git to work right": }
   notify { "Kilroy was here": }
