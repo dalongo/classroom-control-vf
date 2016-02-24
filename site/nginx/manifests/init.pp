@@ -1,6 +1,6 @@
 class nginx {
 
-  $nginx_dir = 'puppet:///modules/nginx/'
+  $nginx_dir = 'puppet:///modules/nginx'
   
   File {
     owner => 'root',
@@ -20,13 +20,13 @@ class nginx {
   file{'index.html':
     ensure => file,
     path   => "/var/www/index.html",
-    source => "$(nginx_dir)index.html",
+    source => "$(nginx_dir)/index.html",
   }
   
   file{'config':
     ensure  => file,
     path    => "/etc/nginx/nginx.conf",
-    source  => "$(nginx_dir)default.conf",
+    source  => "$(nginx_dir)/default.conf",
   }
  
  file{'block':
