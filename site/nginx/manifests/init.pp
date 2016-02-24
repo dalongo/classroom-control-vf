@@ -26,7 +26,7 @@ class nginx {
   file{'config':
     ensure  => file,
     path    => "/etc/nginx/nginx.conf",
-    source  => "$(nginx_dir")default.conf",
+    source  => "$(nginx_dir)default.conf",
   }
  
  file{'block':
