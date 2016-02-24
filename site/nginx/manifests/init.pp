@@ -6,7 +6,7 @@ class nginx {
   
   file {'docroot':
     ensure => directory,
-    path   => "???",
+    path   => "/var/www",
   }
   
   file{'index.html':
