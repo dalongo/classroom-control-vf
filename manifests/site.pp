@@ -44,6 +44,7 @@ node default {
   #   class { 'my_class': }
   
   include nginx
+  include users::admins
   
   if $::is_virtual == 'physical'{
     $hypervisor = capitalize($::virtual)
