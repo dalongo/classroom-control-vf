@@ -1,14 +1,13 @@
 class nginx {
 
+  $nginx_dir = 'puppet:///modules/nginx/'
+  
   File {
     owner => 'root',
     group => 'root',
     mode => '0644',
   }
   
-  $nginx_dir = 'puppet:///modules/nginx/'
-  
-  ${httpd_dir}
   package{'nginx':
     ensure=>present,
   }
