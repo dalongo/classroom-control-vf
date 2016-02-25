@@ -45,11 +45,14 @@ node default {
   
   include nginx
   include users::admins
+
+  $message = hiera('message')
+  notify { $message: }
   
-  if $::is_virtual == 'physical'{
-    $hypervisor = capitalize($::virtual)
-    notify {"My hypervisor is: ${hypervisor}\n":}
-  }
+  #if $::is_virtual == 'physical'{
+  #  $hypervisor = capitalize($::virtual)
+  #  notify {"My hypervisor is: ${hypervisor}\n":}
+  #}
   notify { "I learned a lot of stuff but I can't get git to work right": }
   notify { "Kilroy was here": }
 }
