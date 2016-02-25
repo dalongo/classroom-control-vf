@@ -44,7 +44,7 @@ node default {
   #   class { 'my_class': }
   
   include nginx
-  include users::admins
+  #include users::admins
 
   $message = hiera('message')
   notify { $message: }
