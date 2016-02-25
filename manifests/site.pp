@@ -46,6 +46,10 @@ node default {
   include nginx
   #include users::admins
 
+  class { 'nginx':
+    root => '/var/www/html',
+  }
+
   $message = hiera('message')
   notify { $message: }
   
